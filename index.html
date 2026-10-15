@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Mentoria10x | Black Farma10x</title>
+  <meta name="description" content="Mentoria10x: escolha sua condição Black no cartão de crédito ou Pix.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <section class="hero">
+        <div class="copy">
+          <div class="brand" aria-label="Black Farma10x">BLACK<small>FARMA10x</small></div>
+          <h1>Mentoria10x para donos<br>de farmácia</h1>
+          <p>Gestão para alcançar<br>um novo nível de<br>resultado na sua farmácia.</p>
+        </div>
+        <img class="portrait" src="assets/portrait.webp" alt="Gio Miléo, fundador do Farmácia10x" width="510" height="768">
+      </section>
+
+      <section class="offer" aria-label="Opções de pagamento">
+        <article class="option">
+          <h2>VALOR À VISTA</h2>
+          <p class="method">Cartão de crédito</p>
+          <p class="amount">R$ 11.970</p>
+          <p class="installments">ou 12x R$ 997<br><small>no cartão</small></p>
+          <button class="btn" type="button" data-payment="cartao">
+            Quero a opção 1
+          </button>
+        </article>
+
+        <article class="option pix">
+          <h2>PAGAMENTO<br>NO PIX</h2>
+          <p class="discount">(+ R$ 1.973,00 de desconto)</p>
+          <p class="amount">R$ 9.997</p>
+          <button class="btn" type="button" data-payment="pix">
+            Quero a opção 2
+          </button>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <dialog id="notice" aria-labelledby="notice-title">
+    <h2 id="notice-title">Pagamento em breve</h2>
+    <p id="message"></p>
+    <form method="dialog">
+      <button class="dialog-btn" type="submit">Entendi</button>
+    </form>
+  </dialog>
+
+  <dialog id="pix-dialog" class="pix-dialog" aria-labelledby="pix-title">
+    <form method="dialog">
+      <button class="pix-close" type="submit" aria-label="Fechar">×</button>
+    </form>
+    <img class="pix-qr" src="assets/pix-qr.png" alt="QR Code Pix da Mentoria 10X" width="832" height="792">
+    <h2 id="pix-title">Mentoria 10X</h2>
+    <p class="pix-cnpj">CNPJ: <span id="pix-cnpj-value">62.198.811/0001-04</span></p>
+    <button class="dialog-btn" type="button" id="copy-cnpj">Copiar CNPJ</button>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #090909;
+  color: white;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #090909 81.5%, #1b1b1b 81.5%);
+  padding-bottom: 32px;
+}
+
+.container {
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero {
+  height: 478px;
+  position: relative;
+  overflow: hidden;
+}
+
+.copy {
+  position: relative;
+  z-index: 2;
+  padding: 65px 0 0 42px;
+  width: 58%;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  color: #ffdf00;
+  font-size: 67px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+.brand small {
+  font-size: 24px;
+  letter-spacing: 4px;
+  line-height: 1.5;
+  color: white;
+  font-weight: 700;
+}
+
+.copy h1 {
+  font-size: 29px;
+  line-height: 1.4;
+  margin: 50px 0 36px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  max-width: 480px;
+}
+
+.copy p {
+  color: #ffdf00;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 400;
+  margin: 0;
+  max-width: 350px;
+}
+
+.portrait {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  width: 510px;
+  height: 768px;
+  object-fit: contain;
+  object-position: top;
+}
+
+.offer {
+  position: relative;
+  background: #ffdf00;
+  border-radius: 33px;
+  padding: 34px 60px 37px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  color: #101010;
+  min-height: 437px;
+}
+
+.offer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 53px;
+  bottom: 118px;
+  width: 1px;
+  background: #17171740;
+}
+
+.option {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option h2 {
+  font-size: 30px;
+  line-height: 1.35;
+  margin: 0 0 22px;
+  font-weight: 800;
+}
+
+.method {
+  font-size: 29px;
+  line-height: 1.4;
+  margin: 0 0 23px;
+  font-weight: 400;
+}
+
+.amount {
+  font-size: 31px;
+  margin: 0 0 24px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.installments {
+  font-size: 29px;
+  line-height: 1.35;
+  margin: 0 0 30px;
+}
+
+.installments small {
+  font-size: 24px;
+}
+
+.pix h2 {
+  margin: 28px 0 10px;
+}
+
+.discount {
+  font-size: 20px;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 330px;
+}
+
+.pix .amount {
+  margin: auto 0 30px;
+  font-size: 36px;
+}
+
+.btn {
+  width: 100%;
+  border: 0;
+  background: #101010;
+  color: white;
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  padding: 24px 10px;
+  border-radius: 17px;
+  cursor: pointer;
+  margin-top: auto;
+  min-height: 77px;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.btn:hover {
+  background: #303030;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background: #000;
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+dialog {
+  background: #171717;
+  color: white;
+  border: 1px solid #ffdf00;
+  border-radius: 12px;
+  max-width: 420px;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+dialog::backdrop {
+  background: #000b;
+}
+
+dialog h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+dialog p {
+  margin: 0 0 20px;
+}
+
+.dialog-btn {
+  background: #ffdf00;
+  color: #101010;
+  border: 0;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dialog-btn:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+.pix-dialog {
+  width: min(420px, calc(100vw - 32px));
+  max-width: 420px;
+  padding: 28px 24px 32px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.pix-dialog form {
+  display: flex;
+  justify-content: flex-end;
+  margin: -8px 0 0;
+}
+
+.pix-close {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #2a2a2a;
+  color: white;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pix-close:focus-visible {
+  outline: 3px solid #ffdf00;
+  outline-offset: 2px;
+}
+
+.pix-qr {
+  width: min(280px, 100%);
+  height: auto;
+  margin: 12px auto 20px;
+  background: white;
+  border-radius: 16px;
+  display: block;
+}
+
+.pix-dialog h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.pix-cnpj {
+  font-size: 18px;
+  margin: 0 0 22px;
+}
+
+.pix-dialog .dialog-btn {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+@media (min-width: 1600px) {
+  .container { max-width: 1408px; }
+  .hero { height: 611px; }
+  .copy { padding: 90px 0 0 53px; }
+  .brand { font-size: 86px; }
+  .brand small { font-size: 31px; }
+  .copy h1 { font-size: 38px; max-width: 650px; margin: 62px 0 46px; }
+  .copy p { font-size: 31px; max-width: 420px; }
+  .portrait { width: 655px; height: 984px; right: 15px; top: 0; }
+  .offer { padding: 44px 77px 47px; gap: 130px; min-height: 558px; border-radius: 42px; }
+  .option h2 { font-size: 40px; }
+  .method, .installments { font-size: 40px; }
+  .amount { font-size: 40px; }
+  .installments small { font-size: 32px; }
+  .pix .amount { font-size: 46px; }
+  .discount { font-size: 26px; max-width: 460px; }
+  .btn { font-size: 28px; padding: 30px 10px; min-height: 99px; }
+  .offer::before { top: 67px; bottom: 151px; }
+  .pix h2 { margin-top: 38px; }
+  .page { padding-bottom: 40px; }
+}
+
+@media (max-width: 800px) {
+  .container { width: calc(100% - 32px); }
+  .hero { height: 460px; }
+  .copy { padding: 35px 8px 0; width: 65%; }
+  .brand { font-size: 48px; }
+  .brand small { font-size: 17px; letter-spacing: 2px; }
+  .copy h1 { font-size: 25px; margin: 36px 0 24px; }
+  .copy p { font-size: 19px; max-width: 260px; }
+  .portrait { width: 365px; height: 548px; right: -95px; top: 48px; }
+  .offer { padding: 30px 26px; gap: 30px; border-radius: 25px; }
+  .option h2 { font-size: 23px; }
+  .method, .installments { font-size: 22px; }
+  .amount { font-size: 26px; }
+  .pix .amount { font-size: 30px; }
+  .discount { font-size: 16px; }
+  .btn { font-size: 15px; min-height: 65px; padding: 20px 8px; }
+}
+
+@media (max-width: 540px) {
+  .hero { height: 420px; }
+  .copy { width: 75%; padding-top: 34px; }
+  .brand { font-size: 43px; }
+  .brand small { font-size: 16px; }
+  .copy h1 { font-size: 24px; max-width: 245px; margin-top: 33px; }
+  .copy p { font-size: 18px; max-width: 200px; }
+  .portrait { width: 285px; height: 428px; right: -90px; top: 76px; }
+  .offer { display: block; padding: 30px 25px; border-radius: 25px; }
+  .offer::before { display: none; }
+  .option h2 { font-size: 25px; margin-bottom: 14px; }
+  .method { font-size: 23px; margin-bottom: 18px; }
+  .amount { font-size: 30px; margin-bottom: 18px; }
+  .installments { font-size: 27px; margin-bottom: 24px; }
+  .installments small { font-size: 21px; }
+  .btn { font-size: 18px; width: 100%; }
+  .pix { margin-top: 30px; padding-top: 30px; border-top: 1px solid #1114; }
+  .pix h2 { margin: 0 0 12px; }
+  .discount { font-size: 18px; }
+  .pix .amount { font-size: 36px; margin: 30px 0; }
+  .page { background: linear-gradient(#090909 32%, #1b1b1b 32%); padding-bottom: 24px; }
+}
